@@ -1,0 +1,2467 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "bsns_st API",
+    "description": "bsns_st API",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://bsns_st"
+    }
+  ],
+  "paths": {
+    "/bsns-st/rest/missions/determinercaracteristiquesmission": {
+      "post": {
+        "summary": "POST bsns-st/rest/missions/determinercaracteristiquesmission",
+        "operationId": "determinerCaracteristiquesMission",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeterminerCaracteristiquesMissionRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeterminerCaracteristiquesMissionResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bsns-st/rest/missions/verifiercoherencemissionettechnicien": {
+      "post": {
+        "summary": "POST bsns-st/rest/missions/verifiercoherencemissionettechnicien",
+        "operationId": "verifierCoherenceMissionEtTechnicien",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/VerifierCoherenceMissionEtTechnicienRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/Void"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bsns-st/rest/missions/recuperermissionsenretard": {
+      "post": {
+        "summary": "POST bsns-st/rest/missions/recuperermissionsenretard",
+        "operationId": "recupererMissionsEnRetard",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeterminerMissionsEnRetardRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeterminerMissionsEnRetardResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bsns-st/rest/missions/recuperermissionslongues": {
+      "post": {
+        "summary": "POST bsns-st/rest/missions/recuperermissionslongues",
+        "operationId": "recupererMissionsLongues",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeterminerMissionsLonguesRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeterminerMissionsLonguesResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bsns-st/rest/missions/determinertarification": {
+      "post": {
+        "summary": "POST bsns-st/rest/missions/determinertarification",
+        "operationId": "determinerTarificationMissionTechnique",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeterminerTarificationMissionRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeterminerTarificationMissionResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bsns-st/rest/missions/recupererparid/{missiontechniqueid}": {
+      "get": {
+        "summary": "GET bsns-st/rest/missions/recupererparid/{missiontechniqueid}",
+        "operationId": "recupererParId",
+        "parameters": [
+          {
+            "name": "missiontechniqueid",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetMissionTechniqueParIdResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bsns-st/rest/missions/recupererparintervention/{interventionTechniqueId}": {
+      "get": {
+        "summary": "GET bsns-st/rest/missions/recupererparintervention/{interventionTechniqueId}",
+        "operationId": "recupererParInterventionTechnique",
+        "parameters": [
+          {
+            "name": "interventionTechniqueId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetMissionTechniqueParInterventionTechniqueResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bsns-st/rest/plannings/determinercreneautechnicien": {
+      "post": {
+        "summary": "POST bsns-st/rest/plannings/determinercreneautechnicien",
+        "operationId": "determinerCrenauTechnicien",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeterminerCreneauTechnicienRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeterminerCreneauxTechnicienResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bsns-st/rest/plannings/rechercherdisponibilitetechnicien": {
+      "post": {
+        "summary": "POST bsns-st/rest/plannings/rechercherdisponibilitetechnicien",
+        "operationId": "rechercherDisponibiliteTechnicien",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RechercherDisponibiliteTechnicienRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/RechercherDisponibiliteTechnicienResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bsns-st/rest/plannings/validerintervertirmissionstechnique": {
+      "post": {
+        "summary": "POST bsns-st/rest/plannings/validerintervertirmissionstechnique",
+        "operationId": "validerInterversionMissions",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValiderInterversionMissionTechniqueRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValiderModificationPlanningResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/bsns-st/rest/plannings/validermodificationplanning": {
+      "post": {
+        "summary": "POST bsns-st/rest/plannings/validermodificationplanning",
+        "operationId": "validerModificationPlanning",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ValiderModificationPlanningRequest"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValiderModificationPlanningResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ActionTechnique": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "ACTIVATION_RELEVE_TEMP",
+              "ADAPTATION_ANIMAL",
+              "AIDE_INST_VIDEO",
+              "AJOUT_ALIM_SECTEUR",
+              "AJOUT_EQUIPEMENT",
+              "AJOUT_EQUIPEMENT_BP",
+              "AJOUT_EQUIPEMENT_CA",
+              "AJOUT_EQUIPEMENT_CL",
+              "AJOUT_EQUIPEMENT_CO",
+              "AJOUT_EQUIPEMENT_CONJONCTEUR",
+              "AJOUT_EQUIPEMENT_DC",
+              "AJOUT_EQUIPEMENT_DF",
+              "AJOUT_EQUIPEMENT_DIST",
+              "AJOUT_EQUIPEMENT_IR",
+              "AJOUT_EQUIPEMENT_IRP",
+              "AJOUT_EQUIPEMENT_MA",
+              "AJOUT_EQUIPEMENT_SE",
+              "AJOUT_EQUIPEMENT_SI",
+              "AJOUT_EQUIPEMENT_TC",
+              "AJOUT_EQUIPEMENT_GSM",
+              "AJOUT_PACK_DIJEAU",
+              "APPLICATION_PROG",
+              "ASSISTANCE_TECH_DIST",
+              "CHANGEMENT_ETAT_TRANSMETTEUR",
+              "CONT_REGL_EMPL_EQUIPEMENT",
+              "CONT_REGL_EQUIPEMENT",
+              "DEMONTAGE_TEMPO_EQUIPEMENT",
+              "DEPL_EQUIPEMENT",
+              "DEPL_EQUIPEMENT_TECH",
+              "DEPOSE_EQUIPEMENT",
+              "DESAC_EQUIPEMENT_DIST",
+              "DESAC_EQUIPEMENT_TECH",
+              "DIAG_TERRAIN",
+              "FIN_INST",
+              "GET_ETAT_SYSTEME",
+              "GROHE_DME_ACTIVATION_SUP",
+              "GROHE_DME_DESACTIVATION_SUP",
+              "GROHE_DME_ETAT",
+              "GROHE_DME_FERMETURE_VANNE",
+              "GROHE_DME_MAJ_TELERELEVE",
+              "GROHE_DME_OUVERTURE_VANNE",
+              "LISTE_NOIRE_AJOUT",
+              "LISTE_NOIRE_SUPP",
+              "MIGR_SURTEC_RESIDEO",
+              "MIGR_V2_V5",
+              "MISE_A_JOUR",
+              "MODE_TEST_DEBUT",
+              "MODE_TEST_FIN",
+              "MODIF_ETAT_SYSTEME",
+              "NETTOYER_DF",
+              "INHIBITION_SAV_DEBUT",
+              "INHIBITION_SAV_FIN",
+              "INHIBITION_SAV_MODIF",
+              "INHIBITION_TECHNIQUE_DEBUT",
+              "INHIBITION_TECHNIQUE_FIN",
+              "INHIBITION_TECHNIQUE_MODIF",
+              "INST_VIDEO",
+              "INVALIDATION_INTERVENTION",
+              "PASSAGE_SENSIBILITE_FAIBLE",
+              "PASSAGE_SENSIBILITE_NORMAL",
+              "PERTE_PROG",
+              "RACC_PA_GSM_SECTEUR",
+              "RACCORDEMENT_GSM",
+              "RACCORDEMENT_GSM_TECH",
+              "RACCORDEMENT_IP",
+              "RACCORDEMENT_RTC",
+              "REAL_CONT",
+              "REAL_DECL_TLS",
+              "REAL_INST_CPL",
+              "REAL_INST_TLS",
+              "REAL_INTE_DIST",
+              "REAL_INTE_DIST_GROHE",
+              "REAL_INTE_DIST_OFFLINE",
+              "REAL_INTE_DIST_ONLINE_HOTL",
+              "REAL_INTE_DIST_ONLINE_REPA",
+              "REAL_INTE_DIST_SCRIPT",
+              "REAL_INTE_DIST_SHAFT",
+              "REAL_MAJ_CONFIGURATION",
+              "REAL_REFERENCEMENT_ACQV3",
+              "REAL_REPA_TLS",
+              "REAL_RESI_TLS",
+              "REAL_VISI",
+              "REINIT_EQUIPEMENT",
+              "REMISE_ETAT",
+              "REMISE_EN_PLACE_EQUIPEMENT",
+              "REMPL_BATTERIE",
+              "REMPL_BATTERIE_TECH",
+              "REMPL_BLOC_ALIM",
+              "REMPL_CARTE_ALIM",
+              "REMPL_EQUIPEMENT",
+              "REMPL_EQUIPEMENT_DIST",
+              "REMPL_EQUIPEMENT_TECH",
+              "REMPL_MODULE_GSM",
+              "REMPL_PILE_EQUIPEMENT",
+              "REMPL_PILE_SYSTEME",
+              "REMPL_TOUS_DMPA",
+              "SHAFT_DME_ACTIVATION_PIR",
+              "SHAFT_DME_ACTIVATION_VIDEOALERTE",
+              "SHAFT_DME_CONFIGURATION_CAMERA",
+              "SHAFT_DME_CONFIGURATION_WIFI",
+              "SHAFT_DME_DELETE_LOCAL_RECORD",
+              "SHAFT_DME_DELETE_RECORD",
+              "SHAFT_DME_ETAT_LED",
+              "SHAFT_DME_ETAT_MICRO",
+              "SHAFT_DME_ETAT_WIFI",
+              "SHAFT_DME_FIRMWARE_MAJ",
+              "SHAFT_DME_FIRMWARE_MAJ_STATUT",
+              "SHAFT_DME_FIRMWARE_VERSION",
+              "SHAFT_DME_GET_CAM_CAPABILITIES",
+              "SHAFT_DME_GET_ETAT_CAMERA",
+              "SHAFT_DME_GET_URL_STREAMING",
+              "SHAFT_DME_GET_URL_STREAMING_LIVE",
+              "SHAFT_DME_GET_VIGNETTE",
+              "SHAFT_DME_GET_WIFI",
+              "SHAFT_DME_INHIB_CAMERA",
+              "SHAFT_DME_INHIB_PAV",
+              "SHAFT_DME_INIT_PREPA_TELECHARGEMENT_VIDEO",
+              "SHAFT_DME_LIST_WIFI_DISPONIBLE_COMPATIBLE",
+              "SHAFT_DME_MODIFICATION_MODE_ANIMAL",
+              "SHAFT_DME_MODIFICATION_MODE_DECLENCHEMENT",
+              "SHAFT_DME_MODIFICATION_MODE_FONCTIONNEMENT_SECU",
+              "SHAFT_DME_MODIFICATION_MODE_HUMANOIDE",
+              "SHAFT_DME_MODIFICATION_RESOLUTION_CAMERA",
+              "SHAFT_DME_MODIFICATION_SENS_IMAGE_CAMERA",
+              "SHAFT_DME_MOVE_CAMERA",
+              "SHAFT_DME_PARAMETRAGE_CAMERAS",
+              "SHAFT_DME_PLAY_SOUND",
+              "SHAFT_DME_RECORD_LOCAL_VIDEO",
+              "SHAFT_DME_SDCARD",
+              "SHAFT_DME_SDCARD_FORMATAGE",
+              "SHAFT_DME_SDCARD_FORMATAGE_STATUT",
+              "SHAFT_DME_SDCARD_PARAMETRES",
+              "SHAFT_DME_SDCARD_PRESENCE",
+              "SHAFT_DME_SNAPSHOT",
+              "SHAFT_DME_STOP_RECORDING_LOCAL_VIDEO",
+              "SHAFT_DME_SUPRESSION_PARAMETRAGE_WIFI",
+              "SHAFT_DME_TEST_CAMERA",
+              "SHAFT_DME_UPDATE_SURVEILLANCE_SITE",
+              "SHAFT_DME_SAVE_SURVEILLANCE_POSITION",
+              "SUPP_EQUIPEMENT",
+              "SUPP_EQUIPEMENT_BP",
+              "SUPP_EQUIPEMENT_CL",
+              "SUPP_EQUIPEMENT_CO",
+              "SUPP_EQUIPEMENT_DC",
+              "SUPP_EQUIPEMENT_DF",
+              "SUPP_EQUIPEMENT_IR",
+              "SUPP_EQUIPEMENT_IRP",
+              "SUPP_EQUIPEMENT_SE",
+              "SUPP_EQUIPEMENT_SI",
+              "SUPP_EQUIPEMENT_TC",
+              "SUPP_EQUIPEMENT_GSM",
+              "TEST_DF",
+              "TEST_DAACCO",
+              "TEST_GPRS",
+              "TEST_INTRUSION",
+              "TEST_MAME",
+              "VERIF_ALIM",
+              "VERIF_BATTERIE",
+              "VERIF_CONNECT",
+              "VERIF_EQUI",
+              "VERIF_INST_ENV",
+              "VERIF_INST_VIDEO",
+              "VERIF_POSE_DF",
+              "VERIF_RADIO",
+              "VERIF_TRANS",
+              "VERIF_TRANS_GSM"
+            ]
+          },
+          "peripheriqueId": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "Peripherique": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "codeSousFamillePeripherique": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "InterventionTechnique": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "typeIntervenantTechnique": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "CLIENT",
+              "CONSEILLER_HLC",
+              "SYSTEME",
+              "TECHNICIEN"
+            ]
+          },
+          "actionTechniqueList": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ActionTechnique"
+            }
+          },
+          "peripheriqueList": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/Peripherique"
+            }
+          }
+        }
+      },
+      "Localisation": {
+        "type": "object",
+        "properties": {
+          "locX": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "locY": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "unite": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "WSG84",
+              "LAMBERT"
+            ]
+          }
+        }
+      },
+      "LieuProtege": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "pays": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "AD",
+              "AE",
+              "AF",
+              "AG",
+              "AL",
+              "AM",
+              "AO",
+              "AR",
+              "AT",
+              "AU",
+              "AZ",
+              "BA",
+              "BB",
+              "BD",
+              "BE",
+              "BF",
+              "BG",
+              "BH",
+              "BI",
+              "BJ",
+              "BN",
+              "BO",
+              "BR",
+              "BS",
+              "BT",
+              "BW",
+              "BY",
+              "BZ",
+              "CA",
+              "CD",
+              "CF",
+              "CG",
+              "CH",
+              "CI",
+              "CL",
+              "CM",
+              "CN",
+              "CO",
+              "CR",
+              "CS",
+              "CU",
+              "CV",
+              "CY",
+              "CZ",
+              "DE",
+              "DJ",
+              "DK",
+              "DM",
+              "DO",
+              "DZ",
+              "EC",
+              "EE",
+              "EG",
+              "ER",
+              "ES",
+              "ET",
+              "FI",
+              "FJ",
+              "FM",
+              "FR",
+              "GA",
+              "GB",
+              "GD",
+              "GE",
+              "GH",
+              "GI",
+              "GM",
+              "GN",
+              "GQ",
+              "GR",
+              "GT",
+              "GW",
+              "GY",
+              "HN",
+              "HR",
+              "HT",
+              "HU",
+              "ID",
+              "IE",
+              "IL",
+              "IN",
+              "IQ",
+              "IR",
+              "IS",
+              "IT",
+              "JM",
+              "JO",
+              "JP",
+              "KE",
+              "KG",
+              "KH",
+              "KI",
+              "KM",
+              "KN",
+              "KP",
+              "KR",
+              "KW",
+              "KY",
+              "KZ",
+              "LA",
+              "LB",
+              "LC",
+              "LI",
+              "LK",
+              "LR",
+              "LS",
+              "LT",
+              "LU",
+              "LV",
+              "LY",
+              "MA",
+              "MC",
+              "MD",
+              "MG",
+              "MH",
+              "MK",
+              "ML",
+              "MM",
+              "MN",
+              "MR",
+              "MT",
+              "MU",
+              "MV",
+              "MW",
+              "MX",
+              "MY",
+              "MZ",
+              "NA",
+              "NE",
+              "NG",
+              "NI",
+              "NL",
+              "NO",
+              "NP",
+              "NR",
+              "NZ",
+              "OM",
+              "PA",
+              "PE",
+              "PG",
+              "PH",
+              "PK",
+              "PL",
+              "PT",
+              "PW",
+              "PY",
+              "QA",
+              "RO",
+              "RU",
+              "RW",
+              "SA",
+              "SB",
+              "SC",
+              "SD",
+              "SE",
+              "SG",
+              "SI",
+              "SK",
+              "SL",
+              "SM",
+              "SN",
+              "SO",
+              "SR",
+              "ST",
+              "SV",
+              "SY",
+              "SZ",
+              "TD",
+              "TG",
+              "TH",
+              "TJ",
+              "TM",
+              "TN",
+              "TO",
+              "TR",
+              "TT",
+              "TV",
+              "TZ",
+              "UA",
+              "UG",
+              "US",
+              "UY",
+              "UZ",
+              "VA",
+              "VC",
+              "VE",
+              "VN",
+              "VU",
+              "WS",
+              "YE",
+              "YU",
+              "ZA",
+              "ZM",
+              "ZW",
+              "UK",
+              "INCONNU"
+            ]
+          },
+          "localisation": {
+            "nullable": true,
+            "$ref": "#/components/schemas/Localisation"
+          },
+          "typeHabitat": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "APPARTEMENT",
+              "MAISON",
+              "LOCAL_PROFESSIONNEL"
+            ]
+          },
+          "surface": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          }
+        }
+      },
+      "Langue": {
+        "type": "object",
+        "properties": {
+          "langueParlee": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "fr_BE",
+              "fr_FR",
+              "nl_BE"
+            ]
+          },
+          "ordre": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        }
+      },
+      "DeterminerCaracteristiquesMissionRequest": {
+        "type": "object",
+        "properties": {
+          "interventionTechnique": {
+            "nullable": true,
+            "$ref": "#/components/schemas/InterventionTechnique"
+          },
+          "lieuProtege": {
+            "nullable": true,
+            "$ref": "#/components/schemas/LieuProtege"
+          },
+          "langueParleeDuClientList": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/Langue"
+            }
+          },
+          "hasDroitTechnicien": {
+            "type": "boolean",
+            "nullable": true
+          }
+        }
+      },
+      "CaracteristiquesMission": {
+        "type": "object",
+        "properties": {
+          "dureePrevueEnMinute": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "dureePrevueDedieeEnMinute": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "AJOUT",
+              "CONTROLE_QUALITE",
+              "DEMANDE_CLIENT",
+              "FIN_INSTALLATION",
+              "INSTALLATION",
+              "INSTALLATION_COMPLEMENTAIRE",
+              "INTERVENTION_TECHNIQUE",
+              "MIGRATION",
+              "PILE",
+              "REPARATION",
+              "RESILIATION",
+              "RESILIATION_CONTRAT",
+              "VISITE_AVANT_INSTALLATION"
+            ]
+          },
+          "dateMinimalePriseRendezVous": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "langueRequise": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "fr_BE",
+              "fr_FR",
+              "nl_BE"
+            ]
+          },
+          "isReplanificationNecessaire": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "codeOperationTechnique": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "MIGRATION_4G"
+            ]
+          }
+        }
+      },
+      "DeterminerCaracteristiquesMissionResponse": {
+        "type": "object",
+        "properties": {
+          "caracteristiquesMission": {
+            "nullable": true,
+            "$ref": "#/components/schemas/CaracteristiquesMission"
+          }
+        }
+      },
+      "VerifierCoherenceMissionEtTechnicienRequest": {
+        "type": "object",
+        "properties": {
+          "referenceMission": {
+            "type": "string",
+            "nullable": true
+          },
+          "codeSASTechnicien": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "Void": {
+        "type": "object",
+        "properties": {}
+      },
+      "DeterminerMissionsEnRetardRequest": {
+        "type": "object",
+        "properties": {
+          "codePaysList": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "enum": [
+                "AD",
+                "AE",
+                "AF",
+                "AG",
+                "AL",
+                "AM",
+                "AO",
+                "AR",
+                "AT",
+                "AU",
+                "AZ",
+                "BA",
+                "BB",
+                "BD",
+                "BE",
+                "BF",
+                "BG",
+                "BH",
+                "BI",
+                "BJ",
+                "BN",
+                "BO",
+                "BR",
+                "BS",
+                "BT",
+                "BW",
+                "BY",
+                "BZ",
+                "CA",
+                "CD",
+                "CF",
+                "CG",
+                "CH",
+                "CI",
+                "CL",
+                "CM",
+                "CN",
+                "CO",
+                "CR",
+                "CS",
+                "CU",
+                "CV",
+                "CY",
+                "CZ",
+                "DE",
+                "DJ",
+                "DK",
+                "DM",
+                "DO",
+                "DZ",
+                "EC",
+                "EE",
+                "EG",
+                "ER",
+                "ES",
+                "ET",
+                "FI",
+                "FJ",
+                "FM",
+                "FR",
+                "GA",
+                "GB",
+                "GD",
+                "GE",
+                "GH",
+                "GI",
+                "GM",
+                "GN",
+                "GQ",
+                "GR",
+                "GT",
+                "GW",
+                "GY",
+                "HN",
+                "HR",
+                "HT",
+                "HU",
+                "ID",
+                "IE",
+                "IL",
+                "IN",
+                "IQ",
+                "IR",
+                "IS",
+                "IT",
+                "JM",
+                "JO",
+                "JP",
+                "KE",
+                "KG",
+                "KH",
+                "KI",
+                "KM",
+                "KN",
+                "KP",
+                "KR",
+                "KW",
+                "KY",
+                "KZ",
+                "LA",
+                "LB",
+                "LC",
+                "LI",
+                "LK",
+                "LR",
+                "LS",
+                "LT",
+                "LU",
+                "LV",
+                "LY",
+                "MA",
+                "MC",
+                "MD",
+                "MG",
+                "MH",
+                "MK",
+                "ML",
+                "MM",
+                "MN",
+                "MR",
+                "MT",
+                "MU",
+                "MV",
+                "MW",
+                "MX",
+                "MY",
+                "MZ",
+                "NA",
+                "NE",
+                "NG",
+                "NI",
+                "NL",
+                "NO",
+                "NP",
+                "NR",
+                "NZ",
+                "OM",
+                "PA",
+                "PE",
+                "PG",
+                "PH",
+                "PK",
+                "PL",
+                "PT",
+                "PW",
+                "PY",
+                "QA",
+                "RO",
+                "RU",
+                "RW",
+                "SA",
+                "SB",
+                "SC",
+                "SD",
+                "SE",
+                "SG",
+                "SI",
+                "SK",
+                "SL",
+                "SM",
+                "SN",
+                "SO",
+                "SR",
+                "ST",
+                "SV",
+                "SY",
+                "SZ",
+                "TD",
+                "TG",
+                "TH",
+                "TJ",
+                "TM",
+                "TN",
+                "TO",
+                "TR",
+                "TT",
+                "TV",
+                "TZ",
+                "UA",
+                "UG",
+                "US",
+                "UY",
+                "UZ",
+                "VA",
+                "VC",
+                "VE",
+                "VN",
+                "VU",
+                "WS",
+                "YE",
+                "YU",
+                "ZA",
+                "ZM",
+                "ZW",
+                "UK",
+                "INCONNU"
+              ]
+            }
+          }
+        }
+      },
+      "MissionEnRetard": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "typeMission": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "AJOUT",
+              "CONTROLE_QUALITE",
+              "DEMANDE_CLIENT",
+              "FIN_INSTALLATION",
+              "INSTALLATION",
+              "INSTALLATION_COMPLEMENTAIRE",
+              "INTERVENTION_TECHNIQUE",
+              "MIGRATION",
+              "PILE",
+              "REPARATION",
+              "RESILIATION",
+              "RESILIATION_CONTRAT",
+              "VISITE_AVANT_INSTALLATION"
+            ]
+          },
+          "debutPrevu": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "retard": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "creneauDateMinimale": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "creneauDateMaximale": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "interventionTechniqueRef": {
+            "type": "string",
+            "nullable": true
+          },
+          "technicienCode": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "DeterminerMissionsEnRetardResponse": {
+        "type": "object",
+        "properties": {
+          "missionEnRetardList": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/MissionEnRetard"
+            }
+          }
+        }
+      },
+      "DeterminerMissionsLonguesRequest": {
+        "type": "object",
+        "properties": {
+          "codePaysList": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "enum": [
+                "AD",
+                "AE",
+                "AF",
+                "AG",
+                "AL",
+                "AM",
+                "AO",
+                "AR",
+                "AT",
+                "AU",
+                "AZ",
+                "BA",
+                "BB",
+                "BD",
+                "BE",
+                "BF",
+                "BG",
+                "BH",
+                "BI",
+                "BJ",
+                "BN",
+                "BO",
+                "BR",
+                "BS",
+                "BT",
+                "BW",
+                "BY",
+                "BZ",
+                "CA",
+                "CD",
+                "CF",
+                "CG",
+                "CH",
+                "CI",
+                "CL",
+                "CM",
+                "CN",
+                "CO",
+                "CR",
+                "CS",
+                "CU",
+                "CV",
+                "CY",
+                "CZ",
+                "DE",
+                "DJ",
+                "DK",
+                "DM",
+                "DO",
+                "DZ",
+                "EC",
+                "EE",
+                "EG",
+                "ER",
+                "ES",
+                "ET",
+                "FI",
+                "FJ",
+                "FM",
+                "FR",
+                "GA",
+                "GB",
+                "GD",
+                "GE",
+                "GH",
+                "GI",
+                "GM",
+                "GN",
+                "GQ",
+                "GR",
+                "GT",
+                "GW",
+                "GY",
+                "HN",
+                "HR",
+                "HT",
+                "HU",
+                "ID",
+                "IE",
+                "IL",
+                "IN",
+                "IQ",
+                "IR",
+                "IS",
+                "IT",
+                "JM",
+                "JO",
+                "JP",
+                "KE",
+                "KG",
+                "KH",
+                "KI",
+                "KM",
+                "KN",
+                "KP",
+                "KR",
+                "KW",
+                "KY",
+                "KZ",
+                "LA",
+                "LB",
+                "LC",
+                "LI",
+                "LK",
+                "LR",
+                "LS",
+                "LT",
+                "LU",
+                "LV",
+                "LY",
+                "MA",
+                "MC",
+                "MD",
+                "MG",
+                "MH",
+                "MK",
+                "ML",
+                "MM",
+                "MN",
+                "MR",
+                "MT",
+                "MU",
+                "MV",
+                "MW",
+                "MX",
+                "MY",
+                "MZ",
+                "NA",
+                "NE",
+                "NG",
+                "NI",
+                "NL",
+                "NO",
+                "NP",
+                "NR",
+                "NZ",
+                "OM",
+                "PA",
+                "PE",
+                "PG",
+                "PH",
+                "PK",
+                "PL",
+                "PT",
+                "PW",
+                "PY",
+                "QA",
+                "RO",
+                "RU",
+                "RW",
+                "SA",
+                "SB",
+                "SC",
+                "SD",
+                "SE",
+                "SG",
+                "SI",
+                "SK",
+                "SL",
+                "SM",
+                "SN",
+                "SO",
+                "SR",
+                "ST",
+                "SV",
+                "SY",
+                "SZ",
+                "TD",
+                "TG",
+                "TH",
+                "TJ",
+                "TM",
+                "TN",
+                "TO",
+                "TR",
+                "TT",
+                "TV",
+                "TZ",
+                "UA",
+                "UG",
+                "US",
+                "UY",
+                "UZ",
+                "VA",
+                "VC",
+                "VE",
+                "VN",
+                "VU",
+                "WS",
+                "YE",
+                "YU",
+                "ZA",
+                "ZM",
+                "ZW",
+                "UK",
+                "INCONNU"
+              ]
+            }
+          }
+        }
+      },
+      "MissionLongue": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "typeMission": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "AJOUT",
+              "CONTROLE_QUALITE",
+              "DEMANDE_CLIENT",
+              "FIN_INSTALLATION",
+              "INSTALLATION",
+              "INSTALLATION_COMPLEMENTAIRE",
+              "INTERVENTION_TECHNIQUE",
+              "MIGRATION",
+              "PILE",
+              "REPARATION",
+              "RESILIATION",
+              "RESILIATION_CONTRAT",
+              "VISITE_AVANT_INSTALLATION"
+            ]
+          },
+          "debutReel": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "dureePrevue": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "dureeActuelle": {
+            "type": "integer",
+            "format": "int64",
+            "nullable": true
+          },
+          "interventionTechniqueRef": {
+            "type": "string",
+            "nullable": true
+          },
+          "technicienCode": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "DeterminerMissionsLonguesResponse": {
+        "type": "object",
+        "properties": {
+          "missionLongueList": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/MissionLongue"
+            }
+          }
+        }
+      },
+      "DeterminerTarificationMissionRequest": {
+        "type": "object",
+        "properties": {
+          "lieuProtegeId": {
+            "type": "string",
+            "nullable": true
+          },
+          "typeMissionTechnique": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "AJOUT",
+              "CONTROLE_QUALITE",
+              "DEMANDE_CLIENT",
+              "FIN_INSTALLATION",
+              "INSTALLATION",
+              "INSTALLATION_COMPLEMENTAIRE",
+              "INTERVENTION_TECHNIQUE",
+              "MIGRATION",
+              "PILE",
+              "REPARATION",
+              "RESILIATION",
+              "RESILIATION_CONTRAT",
+              "VISITE_AVANT_INSTALLATION"
+            ]
+          },
+          "actionTechniqueList": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ActionTechnique"
+            }
+          }
+        }
+      },
+      "BigDecimal": {
+        "type": "object",
+        "properties": {}
+      },
+      "DeterminerTarificationMissionResponse": {
+        "type": "object",
+        "properties": {
+          "montant": {
+            "nullable": true,
+            "$ref": "#/components/schemas/BigDecimal"
+          }
+        }
+      },
+      "CreneauClient": {
+        "type": "object",
+        "properties": {
+          "dateArriveeMinimale": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "dateArriveeMaximale": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          }
+        }
+      },
+      "MissionTechnique": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "reference": {
+            "type": "string",
+            "nullable": true
+          },
+          "type": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "AJOUT",
+              "CONTROLE_QUALITE",
+              "DEMANDE_CLIENT",
+              "FIN_INSTALLATION",
+              "INSTALLATION",
+              "INSTALLATION_COMPLEMENTAIRE",
+              "INTERVENTION_TECHNIQUE",
+              "MIGRATION",
+              "PILE",
+              "REPARATION",
+              "RESILIATION",
+              "RESILIATION_CONTRAT",
+              "VISITE_AVANT_INSTALLATION"
+            ]
+          },
+          "etat": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "PLANIFIEE",
+              "DEMARREE",
+              "REALISEE",
+              "ANNULEE",
+              "NON_REALISEE",
+              "A_TRAITER_MANUELLEMENT"
+            ]
+          },
+          "dateDebutPrevue": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "creneauClient": {
+            "nullable": true,
+            "$ref": "#/components/schemas/CreneauClient"
+          },
+          "dureePrevueEnMinute": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "interventionTechniqueId": {
+            "type": "string",
+            "nullable": true
+          },
+          "lieuProtegeId": {
+            "type": "string",
+            "nullable": true
+          },
+          "technicienCode": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "GetMissionTechniqueParIdResponse": {
+        "type": "object",
+        "properties": {
+          "missionTechnique": {
+            "nullable": true,
+            "$ref": "#/components/schemas/MissionTechnique"
+          }
+        }
+      },
+      "GetMissionTechniqueParInterventionTechniqueResponse": {
+        "type": "object",
+        "properties": {
+          "missionTechniqueList": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/MissionTechnique"
+            }
+          }
+        }
+      },
+      "CritereHoraire": {
+        "type": "object",
+        "properties": {
+          "heureRecherche": {
+            "type": "string",
+            "format": "partial-time",
+            "nullable": true
+          },
+          "jourDemandeList": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "enum": [
+                "MONDAY",
+                "TUESDAY",
+                "WEDNESDAY",
+                "THURSDAY",
+                "FRIDAY",
+                "SATURDAY",
+                "SUNDAY"
+              ]
+            }
+          }
+        }
+      },
+      "ContrainteCreneau": {
+        "type": "object",
+        "properties": {
+          "localisation": {
+            "nullable": true,
+            "$ref": "#/components/schemas/Localisation"
+          },
+          "dureePrevue": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "dateMinimalePriseRendezVous": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "typeMissionTechnique": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "AJOUT",
+              "CONTROLE_QUALITE",
+              "DEMANDE_CLIENT",
+              "FIN_INSTALLATION",
+              "INSTALLATION",
+              "INSTALLATION_COMPLEMENTAIRE",
+              "INTERVENTION_TECHNIQUE",
+              "MIGRATION",
+              "PILE",
+              "REPARATION",
+              "RESILIATION",
+              "RESILIATION_CONTRAT",
+              "VISITE_AVANT_INSTALLATION"
+            ]
+          },
+          "critereHoraire": {
+            "nullable": true,
+            "$ref": "#/components/schemas/CritereHoraire"
+          }
+        }
+      },
+      "ContrainteTechnicien": {
+        "type": "object",
+        "properties": {
+          "codePays": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "AD",
+              "AE",
+              "AF",
+              "AG",
+              "AL",
+              "AM",
+              "AO",
+              "AR",
+              "AT",
+              "AU",
+              "AZ",
+              "BA",
+              "BB",
+              "BD",
+              "BE",
+              "BF",
+              "BG",
+              "BH",
+              "BI",
+              "BJ",
+              "BN",
+              "BO",
+              "BR",
+              "BS",
+              "BT",
+              "BW",
+              "BY",
+              "BZ",
+              "CA",
+              "CD",
+              "CF",
+              "CG",
+              "CH",
+              "CI",
+              "CL",
+              "CM",
+              "CN",
+              "CO",
+              "CR",
+              "CS",
+              "CU",
+              "CV",
+              "CY",
+              "CZ",
+              "DE",
+              "DJ",
+              "DK",
+              "DM",
+              "DO",
+              "DZ",
+              "EC",
+              "EE",
+              "EG",
+              "ER",
+              "ES",
+              "ET",
+              "FI",
+              "FJ",
+              "FM",
+              "FR",
+              "GA",
+              "GB",
+              "GD",
+              "GE",
+              "GH",
+              "GI",
+              "GM",
+              "GN",
+              "GQ",
+              "GR",
+              "GT",
+              "GW",
+              "GY",
+              "HN",
+              "HR",
+              "HT",
+              "HU",
+              "ID",
+              "IE",
+              "IL",
+              "IN",
+              "IQ",
+              "IR",
+              "IS",
+              "IT",
+              "JM",
+              "JO",
+              "JP",
+              "KE",
+              "KG",
+              "KH",
+              "KI",
+              "KM",
+              "KN",
+              "KP",
+              "KR",
+              "KW",
+              "KY",
+              "KZ",
+              "LA",
+              "LB",
+              "LC",
+              "LI",
+              "LK",
+              "LR",
+              "LS",
+              "LT",
+              "LU",
+              "LV",
+              "LY",
+              "MA",
+              "MC",
+              "MD",
+              "MG",
+              "MH",
+              "MK",
+              "ML",
+              "MM",
+              "MN",
+              "MR",
+              "MT",
+              "MU",
+              "MV",
+              "MW",
+              "MX",
+              "MY",
+              "MZ",
+              "NA",
+              "NE",
+              "NG",
+              "NI",
+              "NL",
+              "NO",
+              "NP",
+              "NR",
+              "NZ",
+              "OM",
+              "PA",
+              "PE",
+              "PG",
+              "PH",
+              "PK",
+              "PL",
+              "PT",
+              "PW",
+              "PY",
+              "QA",
+              "RO",
+              "RU",
+              "RW",
+              "SA",
+              "SB",
+              "SC",
+              "SD",
+              "SE",
+              "SG",
+              "SI",
+              "SK",
+              "SL",
+              "SM",
+              "SN",
+              "SO",
+              "SR",
+              "ST",
+              "SV",
+              "SY",
+              "SZ",
+              "TD",
+              "TG",
+              "TH",
+              "TJ",
+              "TM",
+              "TN",
+              "TO",
+              "TR",
+              "TT",
+              "TV",
+              "TZ",
+              "UA",
+              "UG",
+              "US",
+              "UY",
+              "UZ",
+              "VA",
+              "VC",
+              "VE",
+              "VN",
+              "VU",
+              "WS",
+              "YE",
+              "YU",
+              "ZA",
+              "ZM",
+              "ZW",
+              "UK",
+              "INCONNU"
+            ]
+          },
+          "langueRequise": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "fr_BE",
+              "fr_FR",
+              "nl_BE"
+            ]
+          },
+          "isRegroupementTechnicien": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "codeTechnicien": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "DeterminerCreneauTechnicienRequest": {
+        "type": "object",
+        "properties": {
+          "lieuProtegeId": {
+            "type": "string",
+            "nullable": true
+          },
+          "contrainteCreneau": {
+            "nullable": true,
+            "$ref": "#/components/schemas/ContrainteCreneau"
+          },
+          "contrainteTechnicien": {
+            "nullable": true,
+            "$ref": "#/components/schemas/ContrainteTechnicien"
+          },
+          "codeOperationTechnique": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "MIGRATION_4G"
+            ]
+          }
+        }
+      },
+      "CreneauHoraire": {
+        "type": "object",
+        "properties": {
+          "dateDebut": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "dureeEnMinute": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        }
+      },
+      "TechnicienDisponible": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "code": {
+            "type": "string",
+            "nullable": true
+          },
+          "langueParleeList": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string",
+              "enum": [
+                "fr_BE",
+                "fr_FR",
+                "nl_BE"
+              ]
+            }
+          }
+        }
+      },
+      "CreneauPropose": {
+        "type": "object",
+        "properties": {
+          "creneauHoraire": {
+            "nullable": true,
+            "$ref": "#/components/schemas/CreneauHoraire"
+          },
+          "creneauClient": {
+            "nullable": true,
+            "$ref": "#/components/schemas/CreneauClient"
+          },
+          "technicienDisponibleList": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/TechnicienDisponible"
+            }
+          }
+        }
+      },
+      "DeterminerCreneauxTechnicienResponse": {
+        "type": "object",
+        "properties": {
+          "creneauProposeList": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/CreneauPropose"
+            }
+          }
+        }
+      },
+      "InformationMission": {
+        "type": "object",
+        "properties": {
+          "lieuProtegeId": {
+            "type": "string",
+            "nullable": true
+          },
+          "codePays": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "AD",
+              "AE",
+              "AF",
+              "AG",
+              "AL",
+              "AM",
+              "AO",
+              "AR",
+              "AT",
+              "AU",
+              "AZ",
+              "BA",
+              "BB",
+              "BD",
+              "BE",
+              "BF",
+              "BG",
+              "BH",
+              "BI",
+              "BJ",
+              "BN",
+              "BO",
+              "BR",
+              "BS",
+              "BT",
+              "BW",
+              "BY",
+              "BZ",
+              "CA",
+              "CD",
+              "CF",
+              "CG",
+              "CH",
+              "CI",
+              "CL",
+              "CM",
+              "CN",
+              "CO",
+              "CR",
+              "CS",
+              "CU",
+              "CV",
+              "CY",
+              "CZ",
+              "DE",
+              "DJ",
+              "DK",
+              "DM",
+              "DO",
+              "DZ",
+              "EC",
+              "EE",
+              "EG",
+              "ER",
+              "ES",
+              "ET",
+              "FI",
+              "FJ",
+              "FM",
+              "FR",
+              "GA",
+              "GB",
+              "GD",
+              "GE",
+              "GH",
+              "GI",
+              "GM",
+              "GN",
+              "GQ",
+              "GR",
+              "GT",
+              "GW",
+              "GY",
+              "HN",
+              "HR",
+              "HT",
+              "HU",
+              "ID",
+              "IE",
+              "IL",
+              "IN",
+              "IQ",
+              "IR",
+              "IS",
+              "IT",
+              "JM",
+              "JO",
+              "JP",
+              "KE",
+              "KG",
+              "KH",
+              "KI",
+              "KM",
+              "KN",
+              "KP",
+              "KR",
+              "KW",
+              "KY",
+              "KZ",
+              "LA",
+              "LB",
+              "LC",
+              "LI",
+              "LK",
+              "LR",
+              "LS",
+              "LT",
+              "LU",
+              "LV",
+              "LY",
+              "MA",
+              "MC",
+              "MD",
+              "MG",
+              "MH",
+              "MK",
+              "ML",
+              "MM",
+              "MN",
+              "MR",
+              "MT",
+              "MU",
+              "MV",
+              "MW",
+              "MX",
+              "MY",
+              "MZ",
+              "NA",
+              "NE",
+              "NG",
+              "NI",
+              "NL",
+              "NO",
+              "NP",
+              "NR",
+              "NZ",
+              "OM",
+              "PA",
+              "PE",
+              "PG",
+              "PH",
+              "PK",
+              "PL",
+              "PT",
+              "PW",
+              "PY",
+              "QA",
+              "RO",
+              "RU",
+              "RW",
+              "SA",
+              "SB",
+              "SC",
+              "SD",
+              "SE",
+              "SG",
+              "SI",
+              "SK",
+              "SL",
+              "SM",
+              "SN",
+              "SO",
+              "SR",
+              "ST",
+              "SV",
+              "SY",
+              "SZ",
+              "TD",
+              "TG",
+              "TH",
+              "TJ",
+              "TM",
+              "TN",
+              "TO",
+              "TR",
+              "TT",
+              "TV",
+              "TZ",
+              "UA",
+              "UG",
+              "US",
+              "UY",
+              "UZ",
+              "VA",
+              "VC",
+              "VE",
+              "VN",
+              "VU",
+              "WS",
+              "YE",
+              "YU",
+              "ZA",
+              "ZM",
+              "ZW",
+              "UK",
+              "INCONNU"
+            ]
+          },
+          "dureePrevueEnMinute": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "langueRequise": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "fr_BE",
+              "fr_FR",
+              "nl_BE"
+            ]
+          },
+          "localisation": {
+            "nullable": true,
+            "$ref": "#/components/schemas/Localisation"
+          },
+          "typeMissionTechnique": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "AJOUT",
+              "CONTROLE_QUALITE",
+              "DEMANDE_CLIENT",
+              "FIN_INSTALLATION",
+              "INSTALLATION",
+              "INSTALLATION_COMPLEMENTAIRE",
+              "INTERVENTION_TECHNIQUE",
+              "MIGRATION",
+              "PILE",
+              "REPARATION",
+              "RESILIATION",
+              "RESILIATION_CONTRAT",
+              "VISITE_AVANT_INSTALLATION"
+            ]
+          },
+          "critereHoraire": {
+            "nullable": true,
+            "$ref": "#/components/schemas/CritereHoraire"
+          },
+          "codeOperationTechnique": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "MIGRATION_4G"
+            ]
+          }
+        }
+      },
+      "RechercherDisponibiliteTechnicienRequest": {
+        "type": "object",
+        "properties": {
+          "dateJourRecherche": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "informationMission": {
+            "nullable": true,
+            "$ref": "#/components/schemas/InformationMission"
+          },
+          "technicienRechercheIdList": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "Creneau": {
+        "type": "object",
+        "properties": {
+          "dateHeureDebut": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "dureeEnMinute": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "codeTechnicienList": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "RechercherDisponibiliteTechnicienResponse": {
+        "type": "object",
+        "properties": {
+          "creneauList": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/Creneau"
+            }
+          }
+        }
+      },
+      "ValiderInterversionMissionTechniqueRequest": {
+        "type": "object",
+        "properties": {
+          "missionId1": {
+            "type": "string",
+            "nullable": true
+          },
+          "missionId2": {
+            "type": "string",
+            "nullable": true
+          }
+        }
+      },
+      "ErreurValidationModificationPlanning": {
+        "type": "object",
+        "properties": {
+          "codeTechnicien": {
+            "type": "string",
+            "nullable": true
+          },
+          "datePlanning": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "typeErreurValidationModificationPlanning": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "CHEVAUCHEMENT_EVENEMENTS",
+              "EVENEMENT_NON_AJOUTABLE",
+              "EVENEMENT_NON_ANNULABLE",
+              "HORAIRE_PAUSE_DEJEUNER_INCORRECT",
+              "MODIFICATION_EVENEMENT_NON_AUTORISEE",
+              "PAUSE_DEJEUNER_IMPOSSIBLE"
+            ]
+          }
+        }
+      },
+      "ValiderModificationPlanningResponse": {
+        "type": "object",
+        "properties": {
+          "erreurValidationModificationPlanningList": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ErreurValidationModificationPlanning"
+            }
+          }
+        }
+      },
+      "EvenementPlanningAValider": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "nullable": true
+          },
+          "dateDebut": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "dureeEnMinute": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "planningJournalierId": {
+            "type": "string",
+            "nullable": true
+          },
+          "typeEvenement": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "INDISPONIBILITE",
+              "MISSION",
+              "PAUSE_DEJEUNER"
+            ]
+          }
+        }
+      },
+      "ModificationEvenementPlanningAValider": {
+        "type": "object",
+        "properties": {
+          "dateModificationUtilisateur": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "evenementPlanningAValider": {
+            "nullable": true,
+            "$ref": "#/components/schemas/EvenementPlanningAValider"
+          },
+          "typeModificationPlanning": {
+            "type": "string",
+            "nullable": true,
+            "enum": [
+              "CREATION",
+              "MODIFICATION",
+              "ANNULATION"
+            ]
+          }
+        }
+      },
+      "ValiderModificationPlanningRequest": {
+        "type": "object",
+        "properties": {
+          "modificationEvenementPlanningAValiderList": {
+            "type": "array",
+            "nullable": true,
+            "items": {
+              "$ref": "#/components/schemas/ModificationEvenementPlanningAValider"
+            }
+          }
+        }
+      }
+    }
+  }
+}
